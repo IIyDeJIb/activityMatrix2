@@ -1,0 +1,2 @@
+class NoWellsFoundError(Exception):
+    pass

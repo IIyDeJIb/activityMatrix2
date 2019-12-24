@@ -1,0 +1,6 @@
+from fullWellList import fullWellList
+import re
+
+# Special treatment for 105 not to confuse it with 1105
+fullWellStr = '(104|(?<!1)105|106|107|108|109|201(?![0-9])|202(?![0-9])|' + '|'.join(fullWellList[8:]) + ')'
+rxCauses = re.compile(fullWellStr + r'(.+?)(?=' + fullWellStr + r'|$)')
