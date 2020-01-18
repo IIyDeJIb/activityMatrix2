@@ -4,6 +4,9 @@ from fullWellList import fullWellList
 from xAndClassFailures import xAndClassFailures
 from customErrors import NoWellsFoundError
 from datetime import datetime
+from openpyxl import load_workbook
+import os
+import re
 
 op = 1
 surf = 0
@@ -13,7 +16,8 @@ uncl = -2
 logging.basicConfig(filename='log1.log', level=logging.DEBUG, format='%(asctime)s:%(funcName)s:%(message)s',
                     filemode='w')
 
-logging.info('Start of Script.')
+logging.info('----------------------- Start of Script.')
+logging.info('----------------------- 2004-2014.')
 rawData = pd.read_csv('2004-2014_rawFailureData2_prep.csv', engine='python', index_col='Date', parse_dates=True).dropna()
 
 dateList = pd.date_range(rawData.index[0], rawData.index[-1], freq='D')
@@ -33,13 +37,18 @@ for date, failInfo in rawData.itertuples():
     actMat0414.loc[date, unclassList] = uncl
 
 
+
+
+
+
+
+# ------------ Processing
 # Manual corrections
 # actMat0414.loc['2004-12-15', ['814', '812', '1302']] =
 # actMat0414.loc['2004-12-15', '814'] =
 # actMat0414.loc['2005-02-16':'2005-02-18', ['405', '1303']] =
 # actMat0414.loc['2005-02-16':'2005-02-18', '405'] =
 
-# Whole-field failures
 actMat0414.loc['2009-12-24', fullWellList] = surf # CRU down due to electrical issues
 actMat0414.loc['2009-12-24', ['204','806','813','1007','107','1419']] = subs # to correct the previous line
 actMat0414.loc['2010-08-16':'2010-08-18', '108'] = surf
