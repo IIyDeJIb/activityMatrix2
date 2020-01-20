@@ -1,4 +1,4 @@
-# List of keywords which are common for surface problem reports
+# List of keywords which are common for surface problem reports.
 import re
 
 # surfKW = 'elec line flow belt gear grbox rrc reset resset tee brdl bridle jack power rail saddle brg bearing motor ' \
