@@ -2,7 +2,7 @@ from pg_pandas import compFillna, closeSeries
 import numpy as np
 from datetime import timedelta
 
-def procFailSeries(seriesIn, tipover=0.75, failTypeCode=None):
+def procFailSeries(seriesIn, tipover0=0.2, tipover1=0.5, failTypeCode=None):
     # Process fail series
     #
     # The following steps are undertaken here:
@@ -10,7 +10,7 @@ def procFailSeries(seriesIn, tipover=0.75, failTypeCode=None):
     # 2. Convert the series into binary "well on/off" format
     # 3. Fix the holes in the binary series
     # 4. Detect the failure streaks (from fail event to fix event) and process each assigning fail type to each where
-    # known with reasonable probability (controlled by 'tipover')
+    # known with reasonable probability (controlled by 'tipover0,1')
     #
     # Headnote 1
     # sufficient fraction of the streak needs to be initially classified as 'X' to classify the whole streak as 'X'.
@@ -37,24 +37,48 @@ def procFailSeries(seriesIn, tipover=0.75, failTypeCode=None):
 
     # Step 4
     failEventDay = seriesInBin.index[seriesInBin.diff() == 1]
-    fixEventDay = seriesInBin.index[seriesInBin.diff() == -1]-timedelta(days=1)
+    try:
+        fixEventDay = seriesInBin.index[seriesInBin.diff() == -1]-timedelta(days=1)
+    except TypeError:
+        print(seriesIn.name)
+        pass
 
-    if failEventDay[0]>fixEventDay[0]:
-        failEventDay = np.insert(fixEventDay,failEventDay.index[0],seriesInBin.index[0])
+    try:    # Well may have no failures on record. This will throw an IndexError.
+        if failEventDay[0]>fixEventDay[0]:
+            failEventDay = np.insert(fixEventDay,failEventDay.index[0],seriesInBin.index[0])
+    except IndexError:
+        return seriesIn
 
-    if failEventDay[-1]>fixEventDay[-1]:
-        fixEventDay = np.append(fixEventDay,seriesInBin.index[-1])
+    try:  # Well may have no repairs on record. This will throw an IndexError.
+        if failEventDay[-1]>fixEventDay[-1]:
+            fixEventDay = np.append(fixEventDay,seriesInBin.index[-1])
+    except IndexError:
+        return seriesIn
 
     for failStart, failEnd in zip(failEventDay, fixEventDay):
         failStreak = seriesIn[failStart: failEnd]
-        if sum(failStreak==-2)!=0:
+        if sum(failStreak==-2)!=0 or sum(failStreak==1)!=0:
             subsFrac = sum(failStreak == -1)/len(failStreak)
             surfFrac = sum(failStreak == 0)/len(failStreak)
-            if subsFrac > tipover and surfFrac == 0:
-                seriesIn[failStart: failEnd] = failTypeCode['subs']
-            elif subsFrac == 0 and surfFrac > tipover:
-                seriesIn[failStart: failEnd] = failTypeCode['surf']
+            # if subsFrac >= tipover and surfFrac < 0.1:
+            #     seriesIn[failStart: failEnd] = failTypeCode['subs']
+            # elif subsFrac < 0.2 and surfFrac >= tipover:
+            #     seriesIn[failStart: failEnd] = failTypeCode['surf']
+            # else:
+            #     pass
+            if subsFrac == 0 or surfFrac == 0:
+                if subsFrac >= tipover0:
+                    seriesIn[failStart: failEnd] = failTypeCode['subs']
+                elif surfFrac >= tipover0:
+                    seriesIn[failStart: failEnd] = failTypeCode['surf']
+                else:
+                    pass
             else:
-                pass
+                if subsFrac >= tipover1 and surfFrac < 0.1:
+                    seriesIn[failStart: failEnd] = failTypeCode['subs']
+                elif subsFrac < 0.1 and surfFrac >= tipover1:
+                    seriesIn[failStart: failEnd] = failTypeCode['surf']
+                else:
+                    pass
 
     return seriesIn

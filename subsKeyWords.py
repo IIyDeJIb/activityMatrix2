@@ -8,6 +8,6 @@ import re
 subsRx = re.compile(r'(p/r|p\\r|r\\p|r/p|rdp|prt|tbg|hit|h/t|h\\t|part|rp|r\.p|p\.r|p\\u|p/u|tubing|[^a-z]hic|csg|cg'
                     r'|casing|not pumping'
                     r'|shut(\s|-)?in|trash|trsh|h\\c|h/c|h\.i\.c|reent'
-                    r'|rig|w/o|w\\o'
+                    r'|rig|w/o|w\\o|p/t|p\\t|[^a-zA-Z]pt'
                     r'|frac|joint|wor|h\.i|s'
-                    r'\\i|s/i|[^a-z]ht[^a-z]|pump([^a-z]|$)|[^a-z]si[^a-z])')
+                    r'\\i|s/i|[^a-z]ht[^a-z]|pump(?! ja)([^a-z]|$)|[^a-z]si[^a-z])', flags=re.IGNORECASE)
