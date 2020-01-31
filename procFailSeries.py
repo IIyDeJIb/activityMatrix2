@@ -2,7 +2,7 @@ from pg_pandas import compFillna, closeSeries
 import numpy as np
 from datetime import timedelta
 
-def procFailSeries(seriesIn, tipover0=0.2, tipover1=0.5, failTypeCode=None):
+def procFailSeries(seriesIn, tipover0=0.1, tipover1=0.5, failTypeCode=None):
     # Process fail series
     #
     # The following steps are undertaken here:
@@ -57,7 +57,14 @@ def procFailSeries(seriesIn, tipover0=0.2, tipover1=0.5, failTypeCode=None):
 
     for failStart, failEnd in zip(failEventDay, fixEventDay):
         failStreak = seriesIn[failStart: failEnd]
-        if sum(failStreak==-2)!=0 or sum(failStreak==1)!=0:
+
+        # Remove single-day downhole failures (improbable)
+        if failStreak.size == 1:
+            if failStreak[0] == -1:
+                seriesIn[failStart: failEnd] = 1
+                continue
+
+        if sum(failStreak == failTypeCode['uncl'])!=0 or sum(failStreak == failTypeCode['op'])!=0:
             subsFrac = sum(failStreak == -1)/len(failStreak)
             surfFrac = sum(failStreak == 0)/len(failStreak)
             # if subsFrac >= tipover and surfFrac < 0.1:
@@ -80,5 +87,11 @@ def procFailSeries(seriesIn, tipover0=0.2, tipover1=0.5, failTypeCode=None):
                     seriesIn[failStart: failEnd] = failTypeCode['surf']
                 else:
                     pass
+
+    # --- Second pass, treat the subsurface failure portion of the series
+    # Larger holes are closed between the subsurface streaks
+    seriesInBinSubs = (seriesIn == failTypeCode['subs'])
+    seriesInBinSubs = closeSeries(seriesInBinSubs, maxHole=12)
+    seriesIn[seriesInBinSubs] = failTypeCode['subs']
 
     return seriesIn

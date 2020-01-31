@@ -22,7 +22,7 @@ def xAndClassFailures(failInfo):
     # Comma check: Detect whether all there is in what was detected is a coma. In that case the failure for that well
     # needs to be read from the next well (and so on). E.g. 801, 101,606 hit will assign hit to all the listed wells.
     # Same logic goes for "&" and " ".
-    comRx = re.compile(r'(^\s?,\s?$|^\s? \s?$|^\s?&\s?$)')
+    comRx = re.compile(r'(^\s?,\s?$|^\s?$|^\s?&\s?$)')
     # comRx = re.compile(r'^\s?,\s?$')
 
     for failTup in allCauses:

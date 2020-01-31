@@ -7,8 +7,11 @@ import re
 #
 # surfRx = re.compile(r'(' + '|'.join(surfKW.split(' ')) + r')')
 
-surfRx = re.compile(r'([^a-zA-Z]ele|(?<!on)line|flowl|belt|grbox|gear|rrc|reset|resset|tee|brdl|bridle|jack|power|rail'
-                    r'|saddle|transformer|bridel'
+surfRx = re.compile(r'((?:[^a-z]|^)el[ei]c|(?<!on)lin{1,2}e|flowl|belt|grbox|gear|rrc|reset|resset|tee|brdl|brid{1,2}'
+                    r'le|jack|power'
+                    r'|rail'
+                    r'|saddle|transformer|bridel|starter'
                     r'|brg|wellhead|well head|bullwheel'
-                    r'|bearing|s\\b|panel|contact|pipe|pump jack'
-                    r'|motor|meter|mtr|fuse|pin[^g]|wrist|timer|unit|lock|brok|puley|pulley|voltage|stuffi|stufi|sheav)', flags=re.IGNORECASE)
+                    r'|bearing|s\\b|panel|contact|pipe' #|pump jack'
+                    r'|motor|meter|mtr|fuse|pin[^g]|wrist|tim{1,2}'
+                    r'er|unit|lock|brok|puley|pulley|voltage|stuffi|stufi|sheav)')

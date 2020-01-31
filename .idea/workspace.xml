@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59130cf6-e0cd-44a1-b7e2-4c6f171669ef" name="Default Changelist" comment="correct exCauses">
+    <list default="true" id="59130cf6-e0cd-44a1-b7e2-4c6f171669ef" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/2004-2014_rawFailureData2_prep - Copy.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/2004-2014_rawFailureData2_prep.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/actMat0414_0.xlsx" afterDir="false" />
@@ -9025,11 +9025,14 @@
       <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actMat0414_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/actMat0414_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullWellList.py" beforeDir="false" afterPath="$PROJECT_DIR$/fullWellList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/onlineRx.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineRx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procFailSeries.py" beforeDir="false" afterPath="$PROJECT_DIR$/procFailSeries.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read04-14Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/read04-14Data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subsKeyWords.py" beforeDir="false" afterPath="$PROJECT_DIR$/subsKeyWords.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/surfKeyWords.py" beforeDir="false" afterPath="$PROJECT_DIR$/surfKeyWords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xAndClassFailures.py" beforeDir="false" afterPath="$PROJECT_DIR$/xAndClassFailures.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9050,8 +9053,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/subsKeyWords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="104" selection-start-line="12" selection-start-column="104" selection-end-line="12" selection-end-column="104" />
+            <state relative-caret-position="286">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -9059,8 +9062,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/surfKeyWords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+            <state relative-caret-position="198">
+              <caret line="9" selection-start-line="9" selection-end-line="16" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -9068,7 +9071,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../activityMatrix/actMatr_prep3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
+            <state relative-caret-position="446">
               <caret line="31" column="47" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="47" />
             </state>
           </provider>
@@ -9077,8 +9080,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/read04-14Data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+            <state relative-caret-position="209">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -9087,52 +9090,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/procFailSeries.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/customErrors.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xData20014-2019.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="57" column="105" selection-start-line="57" selection-start-column="105" selection-end-line="57" selection-end-column="105" />
-              <folding>
-                <element signature="e#94#128#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/actMat0414_01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xAndClassFailures.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="314">
+              <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
               <folding>
                 <element signature="e#140#149#0" expanded="true" />
               </folding>
@@ -9141,10 +9102,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fullWellList.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onlineRx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="154">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/procFailSeries.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="79" column="71" lean-forward="true" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -9166,6 +9148,8 @@
       <find>subs</find>
       <find>surf</find>
       <find>?=!</find>
+      <find>['1403']</find>
+      <find>1403</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -9189,26 +9173,25 @@
         <option value="$PROJECT_DIR$/classifyFailures.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.cmdline" />
         <option value="$PROJECT_DIR$/rxOnline.py" />
-        <option value="$PROJECT_DIR$/actMat0414_01.py" />
-        <option value="$PROJECT_DIR$/xAndClassFailures.py" />
-        <option value="$PROJECT_DIR$/fullWellList.py" />
         <option value="$PROJECT_DIR$/rxCauses.py" />
         <option value="$PROJECT_DIR$/pg_pandas.py" />
         <option value="$PROJECT_DIR$/xData20014-2019.py" />
         <option value="$PROJECT_DIR$/customErrors.py" />
-        <option value="$PROJECT_DIR$/procFailSeries.py" />
-        <option value="$PROJECT_DIR$/subsKeyWords.py" />
         <option value="$PROJECT_DIR$/onlineRx.py" />
+        <option value="$PROJECT_DIR$/subsKeyWords.py" />
+        <option value="$PROJECT_DIR$/actMat0414_01.py" />
         <option value="$PROJECT_DIR$/surfKeyWords.py" />
+        <option value="$PROJECT_DIR$/xAndClassFailures.py" />
+        <option value="$PROJECT_DIR$/fullWellList.py" />
+        <option value="$PROJECT_DIR$/procFailSeries.py" />
         <option value="$PROJECT_DIR$/read04-14Data.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2064" />
-    <option name="height" value="1128" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="1017" />
+    <option name="width" value="1038" />
+    <option name="height" value="1119" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -9216,7 +9199,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="activityMatrix2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activityMatrix2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -9302,7 +9295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579484887709</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added more cases for the regex, more manual corrections. Refined the fail streak processing, now the code judges the cases - where there are both subs and surf within a streak and only one of them - separate">
+      <created>1580019808561</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580019808561</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added more cases for the regex, more manual corrections. Refined the fail streak processing, now the code judges the cases - where there are both subs and surf within a streak and only one of them - separate">
+      <created>1580019915539</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580019915539</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -9315,17 +9322,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2064" height="1128" extended-state="6" />
+    <frame x="1017" y="0" width="1038" height="1119" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5007342" side_tool="true" weight="0.19450317" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.83128834" visible="true" weight="0.105940595" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.83128834" weight="0.305835" />
       <window_info id="Structure" order="2" sideWeight="0.16871166" side_tool="true" weight="0.19450317" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32906404" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5005285" side_tool="true" weight="0.40059054" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="2" sideWeight="0.49947146" visible="true" weight="0.34643227" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="2" sideWeight="0.49947146" visible="true" weight="0.42275575" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32885212" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3359606" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.3448276" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4502463" />
@@ -9338,16 +9345,16 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" sideWeight="0.5007342" side_tool="true" weight="0.19450317" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.83128834" visible="true" weight="0.18217821" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.83128834" visible="true" weight="0.305835" />
       <window_info id="Structure" order="2" sideWeight="0.16871166" side_tool="true" weight="0.19450317" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32906404" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5005285" side_tool="true" weight="0.40059054" />
-      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49947146" visible="true" weight="0.3092037" />
+      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49947146" visible="true" weight="0.42275575" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32885212" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3359606" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.3448276" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.49690083" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4502463" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32906404" />
@@ -9411,7 +9418,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="extract, classify, some manual corrections" />
     <MESSAGE value="first commit of the fail data series processing function procFailSeries.py. Tested, seems to work, the intended behavior still needs to be checked by comparison with the unprocessed series." />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit of the fail data series processing function procFailSeries.py. Tested, seems to work, the intended behavior still needs to be checked by comparison with the unprocessed series." />
+    <MESSAGE value="added more cases for the regex, more manual corrections. Refined the fail streak processing, now the code judges the cases - where there are both subs and surf within a streak and only one of them - separate" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more cases for the regex, more manual corrections. Refined the fail streak processing, now the code judges the cases - where there are both subs and surf within a streak and only one of them - separate" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -9512,13 +9520,6 @@ except IndexError:
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pandas/core/indexing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="1176" selection-start-line="1176" selection-end-line="1176" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/sre_parse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -9551,13 +9552,6 @@ except IndexError:
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullWellList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1958">
-          <caret line="89" column="3" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pg_pandas.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -9575,10 +9569,20 @@ except IndexError:
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/xData20014-2019.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="57" column="105" selection-start-line="57" selection-start-column="105" selection-end-line="57" selection-end-column="105" />
+          <folding>
+            <element signature="e#94#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/actMat0414_01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -9589,68 +9593,72 @@ except IndexError:
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xData20014-2019.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pandas/core/indexing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="57" column="105" selection-start-line="57" selection-start-column="105" selection-end-line="57" selection-end-column="105" />
-          <folding>
-            <element signature="e#94#128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="1184" selection-start-line="1184" selection-end-line="1184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../activityMatrix/actMatr_prep3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subsKeyWords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullWellList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onlineRx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/surfKeyWords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="16" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xAndClassFailures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="314">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
             <element signature="e#140#149#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../activityMatrix/actMatr_prep3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/procFailSeries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+        <state relative-caret-position="352">
+          <caret line="79" column="71" lean-forward="true" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="71" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/onlineRx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/subsKeyWords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="104" selection-start-line="12" selection-start-column="104" selection-end-line="12" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surfKeyWords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/read04-14Data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+        <state relative-caret-position="209">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
