@@ -76,6 +76,22 @@ actMatFull = actMatFull.apply(procFailSeries)
 
 
 # --- Post-processing - Manual corrections of data which does not fit the rules
+
+# Wells which have been completed within the span of the dataset (source: Drilling Info):
+actMatFull.loc['2004-02-06':'2018-08-12', '410'] = 'tbd'
+actMatFull.loc['2004-02-06':'2006-08-16', '1109'] = 'tbd'
+actMatFull.loc['2004-02-06':'2006-08-30', '1106'] = 'tbd'
+actMatFull.loc['2004-02-06':'2006-07-31', '1305'] = 'tbd'
+actMatFull.loc['2004-02-06':'2006-07-21', '1306'] = 'tbd'
+actMatFull.loc['2004-02-06':'2007-01-01', '401'] = 'tbd'
+actMatFull.loc['2004-02-06':'2007-01-01', '801'] = 'tbd'
+actMatFull.loc['2004-02-06':'2007-01-01', '803'] = 'tbd'
+actMatFull.loc['2004-02-06':'2008-01-01', '806'] = 'tbd'
+
+# Other Corrections
+actMatFull.loc['2011-08-14':'2011-08-16', '105'] = failTypeCode['surf'] # masked
+actMatFull.loc['2011-08-14':'2011-08-15', ['814', '609']] = failTypeCode['surf'] # masked
+actMatFull.loc['2009-05-15', '1407'] = failTypeCode['surf']
 actMatFull.loc['2010-12-25', '1404'] = failTypeCode['surf']
 actMatFull.loc['2011-12-20', '1109'] = failTypeCode['surf'] # wire burnt
 actMatFull.loc['2011-12-21':'2011-12-26', '806'] = failTypeCode['surf'] # masked
@@ -163,13 +179,12 @@ actMatFull.loc['2017-08-05':'2017-08-08', '603'] = failTypeCode['surf'] # h/o/a?
 # so must me a minor surface issue.
 actMatFull.loc['2018-01-02':'2018-01-03', ['201', '202', '504', '503', '606', '806', '1002', '1103', '1006', '1418',
                                            '1009']] = failTypeCode['op']
-actMatFull.loc['2018-01-04', '405'] = 0
+actMatFull.loc['2018-01-04', '405'] = failTypeCode['surf']
 actMatFull.loc['2018-07-05', ['201', '202', '504', '704', '807', '809', '812', '814', '1006', '1007', '1008', '1009',
                               '1106']] = failTypeCode['op']
 actMatFull.loc['2018-07-05', '109'] = failTypeCode['subs']
 actMatFull.loc['2018-09-03', '817'] = failTypeCode['surf']
 actMatFull.loc['2018-09-03', ['1005', '1002', '910', '606', '109']] = failTypeCode['op']
-actMatFull.loc['2004-02-06':'2018-08-13', '410'] = 'tbd' # 8-13-2018 taken as the completion date of 410.
 actMatFull.loc['2019-09-29':'2019-11-21', '906'] = failTypeCode['op']
 actMatFull.loc['2009-12-24', actMatFull.columns] = failTypeCode['surf'] # CRU down due to electrical issues
 actMatFull.loc['2009-12-24', ['204', '806', '813', '1007', '107', '1419']] = failTypeCode['subs'] # to correct the

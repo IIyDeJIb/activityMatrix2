@@ -10,7 +10,11 @@ def procFailSeries(seriesIn, tipover0=0.1, tipover1=0.5, failTypeCode=None):
     # 2. Convert the series into binary "well on/off" format
     # 3. Fix the holes in the binary series
     # 4. Detect the failure streaks (from fail event to fix event) and process each assigning fail type to each where
-    # known with reasonable probability (controlled by 'tipover0,1')
+    # known with reasonable probability (see the if correspondent if statements for more information)
+    #
+    # The methodology used here correctly solved many unclassified datapoints. However it also has a backside of
+    # sometimes poor estimate of failure type on one day will trump the days where error was unclassified. Erroneous
+    # fail typing mainly comes from additional comments pumpers sometimes leave after the daily failure report.
     #
     # Headnote 1
     # sufficient fraction of the streak needs to be initially classified as 'X' to classify the whole streak as 'X'.
