@@ -49,7 +49,7 @@ def procFailSeries(seriesIn, tipover0=0.1, tipover1=0.5, failTypeCode=None):
 
     try:    # Well may have no failures on record. This will throw an IndexError.
         if failEventDay[0]>fixEventDay[0]:
-            failEventDay = np.insert(fixEventDay,failEventDay.index[0],seriesInBin.index[0])
+            failEventDay = np.insert(failEventDay,failEventDay.index[0],seriesInBin.index[0])
     except IndexError:
         return seriesIn
 

@@ -89,6 +89,7 @@ actMatFull.loc['2004-02-06':'2007-01-01', '803'] = 'tbd'
 actMatFull.loc['2004-02-06':'2008-01-01', '806'] = 'tbd'
 
 # Other Corrections
+actMatFull.loc['2004-06-02', ['505', '1006']] = failTypeCode['subs'] # masked
 actMatFull.loc['2011-08-14':'2011-08-16', '105'] = failTypeCode['surf'] # masked
 actMatFull.loc['2011-08-14':'2011-08-15', ['814', '609']] = failTypeCode['surf'] # masked
 actMatFull.loc['2009-05-15', '1407'] = failTypeCode['surf']
