@@ -1,5 +1,6 @@
 from pg_pandas import compFillna, closeSeries
 import numpy as np
+import pandas as pd
 from datetime import timedelta
 
 def procFailSeries(seriesIn, tipover0=0.1, tipover1=0.5, failTypeCode=None):
@@ -49,13 +50,13 @@ def procFailSeries(seriesIn, tipover0=0.1, tipover1=0.5, failTypeCode=None):
 
     try:    # Well may have no failures on record. This will throw an IndexError.
         if failEventDay[0]>fixEventDay[0]:
-            failEventDay = np.insert(failEventDay,failEventDay.index[0],seriesInBin.index[0])
+            failEventDay = np.insert(failEventDay,0,seriesInBin.index[0])
     except IndexError:
         return seriesIn
 
     try:  # Well may have no repairs on record. This will throw an IndexError.
         if failEventDay[-1]>fixEventDay[-1]:
-            fixEventDay = np.append(fixEventDay,seriesInBin.index[-1])
+            fixEventDay = fixEventDay.append(pd.Index([seriesInBin.index[-1]]))
     except IndexError:
         return seriesIn
 
