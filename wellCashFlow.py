@@ -2,13 +2,16 @@ import numpy as np
 from datetime import datetime, timedelta
 import pandas as pd
 
-def well_moDCF(startDate=datetime(2020,1,11), endDate=datetime(2021,1,1), qini=5, decline=0.05, discRate=0.1,
-              investment=10000,
-              oilPrice=55, NRI=0.875, fixedCost=300):
+# def well_moDCF(startDate=datetime(2020,1,11), endDate=datetime(2021,1,1), qini=5, decline=0.05, discRate=0.1,
+#               investment=10000,
+#               oilPrice=55, NRI=0.875, fixedCost=300):
+def well_moDCF(caseDetails):
+
     """
     Monthly cash flow from an oil well after an initial investment. It is assumed that production starts right at
     the time of investment.
     Input:
+    caseDetails : <dict> with fields:
         startDate, endDate  :   <datetime.datetime object> start and end dates of the calculation
         qini                :   <float> initial production rate
         decline             :   <float> production rate decline
@@ -25,16 +28,42 @@ def well_moDCF(startDate=datetime(2020,1,11), endDate=datetime(2021,1,1), qini=5
     2-8-2020
     """
 
-    if (endDate-startDate) < timedelta(days=60):
-        print('Error: Range of dates should be at least 60 days. Return -1.')
-        return -1
+    if caseDetails == None:
+        caseDetails={
+            'startDate':    datetime(2020, 1, 11),
+            'endDate':      datetime(2021, 1, 1),
+            'qini':         5,
+            'decline':      0.05,
+            'discRate':     0.1,
+            'investment':   10000,
+            'oilPrice':     55,
+            'NRI':          0.875,
+            'fixedCost':    300
+        }
+
+    startDate = caseDetails['startDate']
+    endDate = caseDetails['endDate']
+    qini = caseDetails['qini']
+    decline = caseDetails['decline']
+    discRate = caseDetails['discRate']
+    investment = caseDetails['investment']
+    oilPrice = caseDetails['oilPrice']
+    NRI = caseDetails['NRI']
+    fixedCost = caseDetails['fixedCost']
+
+    # if (endDate-startDate) < timedelta(days=60):
+    #     print('Error: Range of dates should be at least 60 days. Return -1.')
+    #     return -1
 
     # Monthly exponential decline coef
     k_mo = np.log(1 - decline) / 12
 
     # Define compounding periods
-    dateRange = pd.date_range(startDate, endDate, freq='M')
-    dateRange = dateRange.append(pd.Index([endDate]))
+    if (endDate.month == startDate.month) and (endDate.year == startDate.year):
+        dateRange = pd.Index([endDate])
+    else:
+        dateRange = pd.date_range(startDate, endDate, freq='M')
+        dateRange = dateRange.append(pd.Index([endDate]))
     CFdf = pd.DataFrame(data={'Date': dateRange})
 
     # Count days in the compounding periods

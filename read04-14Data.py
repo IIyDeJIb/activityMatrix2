@@ -13,7 +13,8 @@ from datetime import datetime
 failTypeCode = {'subs': -1,
                 'surf': 0,
                 'uncl': -2,
-                'op': 1}
+                'op':   1,
+                'tbd':  -3}
 
 logging.basicConfig(filename='log1.log', level=logging.DEBUG, format='%(asctime)s:%(funcName)s:%(message)s',
                     filemode='w')
@@ -78,15 +79,11 @@ actMatFull = actMatFull.apply(procFailSeries)
 # --- Post-processing - Manual corrections of data which does not fit the rules
 
 # Wells which have been completed within the span of the dataset (source: Drilling Info):
-actMatFull.loc['2004-02-06':'2018-08-12', '410'] = 'tbd'
-actMatFull.loc['2004-02-06':'2006-08-16', '1109'] = 'tbd'
-actMatFull.loc['2004-02-06':'2006-08-30', '1106'] = 'tbd'
-actMatFull.loc['2004-02-06':'2006-07-31', '1305'] = 'tbd'
-actMatFull.loc['2004-02-06':'2006-07-21', '1306'] = 'tbd'
-actMatFull.loc['2004-02-06':'2007-01-01', '401'] = 'tbd'
-actMatFull.loc['2004-02-06':'2007-01-01', '801'] = 'tbd'
-actMatFull.loc['2004-02-06':'2007-01-01', '803'] = 'tbd'
-actMatFull.loc['2004-02-06':'2008-01-01', '806'] = 'tbd'
+actMatFull.loc['2004-02-06':'2018-08-12', '410'] = failTypeCode['tbd']
+actMatFull.loc['2004-02-06':'2006-08-16', '1109'] = failTypeCode['tbd']
+actMatFull.loc['2004-02-06':'2006-07-14', '1106'] = failTypeCode['tbd']
+actMatFull.loc['2004-02-06':'2006-07-31', '1305'] = failTypeCode['tbd']
+actMatFull.loc['2004-02-06':'2006-07-21', '1306'] = failTypeCode['tbd']
 
 # Other Corrections
 actMatFull.loc['2004-06-02', ['505', '1006']] = failTypeCode['subs'] # masked

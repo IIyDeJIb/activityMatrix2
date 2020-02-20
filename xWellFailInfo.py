@@ -10,7 +10,11 @@ def xWellFailInfo(ser):
                'AFE#',
                'WOcost']
 
-    serBin = (ser == -1)*1
+    if ser.dtypes == 'object':
+        serBin = (ser == '-1.0') * 1    # The wells which were drilled after within the past 15 years will be recorded
+                                        # as str
+    else:
+        serBin = (ser == -1)*1
 
     failEventDay = (serBin.index[serBin.diff() == 1]).to_list()
     fixEventDay = (serBin.index[serBin.diff() == -1] - timedelta(days=1)).to_list()
